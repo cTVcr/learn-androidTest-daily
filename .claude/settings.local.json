@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tasklist)",
+      "Bash(find /e -maxdepth 6 -name \"*.ini\" -path \"*my_avd*\")",
+      "Bash(find /e -maxdepth 6 -name \"config.ini\" -path \"*avd*\")",
+      "Bash(find /e -maxdepth 6 -name \"*.img\" -path \"*my_avd*\")",
+      "Bash(find /e -maxdepth 6 -name \"*.avd\" -type d)",
+      "Bash(find /e -maxdepth 6 -name \"*.ini\" -path \"*avd*\")",
+      "Bash(export ANDROID_SDK_ROOT=\"E:/Data/Android/SDK\")",
+      "Bash(\"E:/Data/Android/SDK/cmdline-tools/latest/bin/avdmanager.bat\" list *)",
+      "Bash(\"E:/Data/Android/SDK/tools/bin/avdmanager.bat\" list *)",
+      "Bash(echo \"avdmanager not found in expected locations\")",
+      "Read(//e/Data/Android/SDK/**)",
+      "Bash(E:/Data/Android/SDK/platform-tools/adb.exe devices *)",
+      "Bash(E:\\\\Data\\\\Android\\\\SDK\\\\emulator\\\\emulator.exe *)",
+      "Bash(E:/Data/Android/SDK/emulator/emulator.exe *)"
+    ]
+  }
+}

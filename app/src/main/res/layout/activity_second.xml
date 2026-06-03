@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/second_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My is second page,it is a test to Intent"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_text_data_VIP"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/main_button_backToSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back To Main Page"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@id/second_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/second_text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is preson data"
+        android:textSize="40dp"
+        android:textColor="@android:color/holo_orange_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/second_text_data_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/second_text_data"
+        app:layout_constraintEnd_toStartOf="@id/second_text_data_age"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/second_text_data_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="AGE"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/second_text_data"
+        app:layout_constraintEnd_toStartOf="@id/second_text_data_VIP"
+        app:layout_constraintStart_toEndOf="@id/second_text_data_name" />
+    <TextView
+        android:id="@+id/second_text_data_VIP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="IsVIP"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/second_text_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/second_text_data_age" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
