@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.tao.android.myfristandroid.activity.SecondActivity;
+import com.tao.android.myfristandroid.activity.UiActivity;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG = "MainActivity";
@@ -32,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         //核心操作 将主界面加载进来
         setContentView(R.layout.activity_main);
-//        textView = findViewById(R.id.counterTextView);
+
         android.widget.Button mybutton = findViewById(R.id.main_button_toSecond);
+        View toUiButton = findViewById(R.id.main_button_toUi);
 
         if (savedInstanceState != null) {
             counter = savedInstanceState.getInt(KEY_COUNTER,0);
@@ -57,6 +60,18 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
                 setResult(RESULT_OK,intent);
+                finish();
+            }
+        });
+
+        toUiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UiActivity.class );
+//                Bundle bundle = new Bundle();
+//                bundle.putInt(KEY_COUNTER,counter);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this,"进入UI Test界面",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
