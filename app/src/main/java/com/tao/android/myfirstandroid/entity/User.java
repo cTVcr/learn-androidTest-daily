@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.entity;
+package com.tao.android.myfirstandroid.entity;
 
 /**
  * ClassName: User

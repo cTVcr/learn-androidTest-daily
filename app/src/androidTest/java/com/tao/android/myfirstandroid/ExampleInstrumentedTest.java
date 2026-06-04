@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid;
+package com.tao.android.myfirstandroid;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

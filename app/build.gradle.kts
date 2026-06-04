@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tao.android.myfristandroid"
+    namespace = "com.tao.android.myfirstandroid"
     compileSdk = 36
 
     defaultConfig {
@@ -38,5 +38,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.3.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+    implementation("com.google.code.gson:gson:2.8.9")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
 // 版本可按需更新
 }

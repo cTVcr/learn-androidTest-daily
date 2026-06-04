@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.model;
+package com.tao.android.myfirstandroid.model;
 
 import java.util.Objects;
 

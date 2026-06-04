@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.activity;
+package com.tao.android.myfirstandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,16 +7,16 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.google.android.material.snackbar.Snackbar;
-import com.tao.android.myfristandroid.MainActivity;
-import com.tao.android.myfristandroid.R;
-import com.tao.android.myfristandroid.adapter.FoodAdapter;
-import com.tao.android.myfristandroid.model.FoodItem;
+import com.tao.android.myfirstandroid.MainActivity;
+import com.tao.android.myfirstandroid.R;
+import com.tao.android.myfirstandroid.adapter.FoodAdapter;
+import com.tao.android.myfirstandroid.model.FoodItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,11 +108,20 @@ public class UiActivity extends AppCompatActivity {
         foodList.add(new FoodItem("花", R.drawable.han1, "漂亮的花"));
 
         RecyclerView recyclerView = findViewById(R.id.ui_recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        线性
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+//        网格
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+//        瀑布
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         FoodAdapter adapter = new FoodAdapter(foodList);
 
         recyclerView.setAdapter(adapter);
+
+
     }
 
 

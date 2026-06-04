@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid;
+package com.tao.android.myfirstandroid;
 
 import org.junit.Test;
 

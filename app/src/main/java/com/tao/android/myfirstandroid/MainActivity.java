@@ -1,21 +1,22 @@
-package com.tao.android.myfristandroid;
+package com.tao.android.myfirstandroid;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.tao.android.myfristandroid.activity.SecondActivity;
-import com.tao.android.myfristandroid.activity.UiActivity;
+import com.tao.android.myfirstandroid.activity.DataStorageActivity;
+import com.tao.android.myfirstandroid.activity.NetworkActivity;
+import com.tao.android.myfirstandroid.activity.SecondActivity;
+import com.tao.android.myfirstandroid.activity.UiActivity;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG = "MainActivity";
@@ -76,12 +77,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // ✨ AI 补充：跳转到数据存储学习页面
+        // 同时演示 SQLite 和 SharedPreferences 两种存储方式
+        View toDataStorageButton = findViewById(R.id.main_button_toDataStorage);
+        toDataStorageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "进入数据存储学习页面", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
         //后续
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        View toNetWorkTestButton = findViewById(R.id.main_button_toNetWorkTest);
+        toNetWorkTestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NetworkActivity.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this,"进入网络测试界面",Toast.LENGTH_SHORT).show();
+                finish();
+
+            }
+        });
+
+
     }
 
 

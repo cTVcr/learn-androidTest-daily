@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools">
+          xmlns:tools="http://schemas.android.com/tools"
+    package="com.tao.android.myfirstandroid">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
             android:allowBackup="true"
@@ -35,6 +39,14 @@
         </activity>
 
         <activity android:name=".activity.UiActivity">
+
+        </activity>
+
+        <!-- ✨ AI 补充：数据存储学习页面 -->
+        <activity android:name=".activity.DataStorageActivity">
+
+        </activity>
+        <activity android:name=".activity.NetworkActivity">
 
         </activity>
 

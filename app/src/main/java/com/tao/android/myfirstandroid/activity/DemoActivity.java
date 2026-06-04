@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.activity;
+package com.tao.android.myfirstandroid.activity;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;

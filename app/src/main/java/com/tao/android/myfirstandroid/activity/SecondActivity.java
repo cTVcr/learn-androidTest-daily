@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.activity;
+package com.tao.android.myfirstandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.tao.android.myfristandroid.MainActivity;
-import com.tao.android.myfristandroid.R;
+import com.tao.android.myfirstandroid.MainActivity;
+import com.tao.android.myfirstandroid.R;
 
 /**
  * ClassName: SecondActivity

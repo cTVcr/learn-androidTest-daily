@@ -1,4 +1,4 @@
-package com.tao.android.myfristandroid.adapter;
+package com.tao.android.myfirstandroid.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.tao.android.myfristandroid.R;
-import com.tao.android.myfristandroid.model.FoodItem;
+import com.tao.android.myfirstandroid.R;
+import com.tao.android.myfirstandroid.model.FoodItem;
 
 import java.util.List;
 
@@ -41,6 +41,11 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         holder.foodName.setText(item.getName());
         holder.foodDescription.setText(item.getDescription());
         holder.foodImage.setImageResource(item.getImageResId());
+    }
+
+    public  void updateData(List<FoodItem> newfoodList){
+        this.foodList=newfoodList;
+        notifyDataSetChanged();
     }
 
     @Override
